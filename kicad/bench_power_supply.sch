@@ -1,0 +1,175 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Bench power supply"
+Date "2020-04-15"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E978ECE
+P 4550 2400
+F 0 "#FLG0101" H 4550 2475 50  0001 C CNN
+F 1 "PWR_FLAG" H 4550 2573 50  0000 C CNN
+F 2 "" H 4550 2400 50  0001 C CNN
+F 3 "~" H 4550 2400 50  0001 C CNN
+	1    4550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E979EC6
+P 5000 2400
+F 0 "#FLG0102" H 5000 2475 50  0001 C CNN
+F 1 "PWR_FLAG" H 5000 2573 50  0000 C CNN
+F 2 "" H 5000 2400 50  0001 C CNN
+F 3 "~" H 5000 2400 50  0001 C CNN
+	1    5000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E97A2CB
+P 5000 2600
+F 0 "#PWR0101" H 5000 2350 50  0001 C CNN
+F 1 "GND" H 5005 2427 50  0000 C CNN
+F 2 "" H 5000 2600 50  0001 C CNN
+F 3 "" H 5000 2600 50  0001 C CNN
+	1    5000 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2400 5000 2600
+$Comp
+L power:VCC #PWR0102
+U 1 1 5E97B547
+P 4550 2600
+F 0 "#PWR0102" H 4550 2450 50  0001 C CNN
+F 1 "VCC" H 4568 2773 50  0000 C CNN
+F 2 "" H 4550 2600 50  0001 C CNN
+F 3 "" H 4550 2600 50  0001 C CNN
+	1    4550 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2400 4550 2600
+Wire Wire Line
+	5250 3600 5250 3200
+Wire Wire Line
+	5250 3700 5250 3950
+Wire Wire Line
+	5250 3200 7550 3200
+Wire Wire Line
+	7550 3200 7550 3550
+Wire Wire Line
+	7550 3950 7550 3650
+Wire Wire Line
+	6150 3600 6200 3600
+Wire Wire Line
+	6200 3600 6200 3550
+Wire Wire Line
+	6150 3700 6200 3700
+Wire Wire Line
+	6200 3700 6200 3750
+Wire Wire Line
+	6200 3750 6650 3750
+Wire Wire Line
+	5250 3950 7550 3950
+Connection ~ 6300 3550
+Wire Wire Line
+	6200 3550 6300 3550
+Wire Wire Line
+	6300 3550 6650 3550
+Wire Wire Line
+	6300 4300 6300 3550
+Wire Wire Line
+	6650 3650 6500 3650
+Wire Wire Line
+	6500 3650 6500 4300
+Wire Wire Line
+	6500 4300 7050 4300
+$Comp
+L Connector:Screw_Terminal_01x01 J1
+U 1 1 5E9A0BA1
+P 5750 4500
+F 0 "J1" V 5622 4580 50  0000 L CNN
+F 1 "+Output Terminal" V 5713 4580 50  0000 L CNN
+F 2 "" H 5750 4500 50  0001 C CNN
+F 3 "~" H 5750 4500 50  0001 C CNN
+	1    5750 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 4300 6300 4300
+$Comp
+L Connector:Screw_Terminal_01x01 J2
+U 1 1 5E9A03E6
+P 7050 4500
+F 0 "J2" V 6922 4580 50  0000 L CNN
+F 1 "-Output Terminal" V 7013 4580 50  0000 L CNN
+F 2 "" H 7050 4500 50  0001 C CNN
+F 3 "~" H 7050 4500 50  0001 C CNN
+	1    7050 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L CustomComponents:LTC3780 U1
+U 1 1 5E9AD4E1
+P 5700 3650
+F 0 "U1" H 5700 3965 50  0000 C CNN
+F 1 "LTC3780" H 5700 3874 50  0000 C CNN
+F 2 "" H 5600 3550 50  0001 C CNN
+F 3 "" H 5600 3550 50  0001 C CNN
+	1    5700 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CustomComponents:DSN-VC288 U2
+U 1 1 5E9ADD30
+P 7100 3600
+F 0 "U2" H 7100 3915 50  0000 C CNN
+F 1 "DSN-VC288" H 7100 3824 50  0000 C CNN
+F 2 "" H 7000 3500 50  0001 C CNN
+F 3 "" H 7000 3500 50  0001 C CNN
+	1    7100 3600
+	1    0    0    -1  
+$EndComp
+Connection ~ 5250 3950
+Connection ~ 5250 3200
+Wire Wire Line
+	4350 3950 5250 3950
+Wire Wire Line
+	4350 3200 5250 3200
+$Comp
+L power:GND #PWR0104
+U 1 1 5E98C679
+P 4350 3950
+F 0 "#PWR0104" H 4350 3700 50  0001 C CNN
+F 1 "GND" H 4355 3777 50  0000 C CNN
+F 2 "" H 4350 3950 50  0001 C CNN
+F 3 "" H 4350 3950 50  0001 C CNN
+	1    4350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5E98BF33
+P 4350 3200
+F 0 "#PWR0103" H 4350 3050 50  0001 C CNN
+F 1 "VCC" H 4367 3373 50  0000 C CNN
+F 2 "" H 4350 3200 50  0001 C CNN
+F 3 "" H 4350 3200 50  0001 C CNN
+	1    4350 3200
+	1    0    0    -1  
+$EndComp
+Text Notes 5450 3150 0    50   ~ 0
+Trimmer potentiometers included in U1 for\ncurrent and voltage adjustment
+$EndSCHEMATC
