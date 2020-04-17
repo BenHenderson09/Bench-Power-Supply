@@ -172,4 +172,14 @@ F 3 "" H 4350 3200 50  0001 C CNN
 $EndComp
 Text Notes 5450 3150 0    50   ~ 0
 Trimmer potentiometers included in U1 for\ncurrent and voltage adjustment
+Wire Notes Line
+	4250 4200 4500 4200
+Wire Notes Line
+	4500 4200 4500 2950
+Wire Notes Line
+	4500 2950 4250 2950
+Wire Notes Line
+	4250 2950 4250 4200
+Text Notes 2650 3150 0    50   ~ 0
+20v power source.\nIn this case, a laptop charger was used.
 $EndSCHEMATC
